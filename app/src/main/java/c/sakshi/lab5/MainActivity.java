@@ -21,15 +21,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
 
-        sharedpreferences = getSharedPreferences( "c.sakshi.lab5" , Context.MODE_PRIVATE);
+        sharedpreferences = getSharedPreferences("c.sakshi.lab5", Context.MODE_PRIVATE);
 
-        if(!sharedpreferences.getString(  usernameKey , "").equals("")){
-            goToActivity2( sharedpreferences.getString( usernameKey, "" ));
+        if (!sharedpreferences.getString(usernameKey, "").equals("")) {
+            goToActivity2(sharedpreferences.getString(usernameKey, ""));
 
         } else {
 
             setContentView(R.layout.activity_main);
         }
+
+
     }
 
     public void onButtonClick(View view) {
